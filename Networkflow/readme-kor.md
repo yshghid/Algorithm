@@ -43,9 +43,9 @@
 
 최대 흐름 문제는 소스 s에서 싱크 t로 가는 최대 값을 가진 흐름 f를 찾는 것이다.
 
-<img src="https://github.com/yshghid/Algorithm/assets/153489198/ccb9c791-78cb-4dda-af7d-ac62989401b0" width=600>
-
 #### 최대 흐름 문제 - 그리디 알고리즘
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/ccb9c791-78cb-4dda-af7d-ac62989401b0" width=600>
 
 그림에서 최대 흐름을 그리디 알고리즘으로 찾기. 
 
