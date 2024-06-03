@@ -25,11 +25,9 @@
 
 - capacity = 10(s→1) + 8(3→4) + 10(6→t) = 28
 
-#### Nextflow - quiz 1
-
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/daa372e3-8171-4081-9979-766c4efc5316" width = "600">
 
-주어진 st-cut의 용량은?
+그림에서, 주어진 st-cut의 용량은?
 
 **A.** 11 (20 + 25 − 8 − 11 − 9 − 6)
 
