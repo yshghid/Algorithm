@@ -16,8 +16,13 @@
 
 <image src="https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2" width = "600">
 
-- 위 그림에서 {s} = *A*, {1,2,3,4,5,6,t} = *B*
+- 위 그림에서 {s} = A, {1,2,3,4,5,6,t} = B
 - st-cut의 용량: 10(s→1) + 5(s→3) + 15(s→5) = 30
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/abe1a54d-8cee-4fe3-974a-c0d76062bcb8" width = "600">
+
+- 위 그림에서 {s, 3, 5, 6} = A, {1, 2, 4, t} = B
+- st-cut의 용량: 10(s→1) + 8(3→4) + 10(6→t) = 28
 
 ## Maximum-flow problem
 
@@ -85,10 +90,12 @@ A: 한 번 에지에 흐름을 증가시키면 이를 다시 줄일 수 없기 �
 
 ## Residual network
 
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/913302ff-b39b-4575-990b-0fbfb7ca0855" width=300>
+
 - 흐름 네트워크 G에서 원래 에지 e가 갖는 특성은 흐름 f(e) (해당 엣지를 통과하는 현재 흐름), 용량 c(e)(해당 엣지가 처리할 수 있는 최대 흐름)이다.
 - 잔여 네트워크 Gf는 역 에지 e(reverse)를 갖는다. 역 에지는 원래 엣지 e를 통해 보낸 흐름을 "되돌리는" 것을 허용한다.
 - 잔여 네트워크의 원래 에지 e의 잔여 용량 cf(e) = c(e) - f(e) 는 원래 방향으로 흐름을 증가시킬 수 있는 남은 용량을 나타낸다. 
 - 잔여 네트워크의 역 에지 e의 잔여 용량 cf(e(reverse)) = f(e) 는 역 방향으로 흐름을 줄일 수 있는 용량을 나타낸다.
 
-<img src="https://github.com/yshghid/Algorithm/assets/153489198/913302ff-b39b-4575-990b-0fbfb7ca0855" width=300>
+
 
