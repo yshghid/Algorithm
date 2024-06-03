@@ -110,9 +110,7 @@ The maximum-flow problem aims to find a flow f of maximum value from the source 
 2. 첫번째 증강 경로: 양수 잔여 용량이 있는 경로를 찾는다. 즉 각 에지에서 f(e)<c(e) 인 경로를 찾는다.
 
 - 경로 s->1->4->t
-
 - 경로의 최소 잔여 용량: min(10, 8, 10) = 8
-
 - 경로를 따라 흐름이 8 증가: f(s->1) = 8, f(1->4) = 8, f(4->t) = 8
 
 3. 잔여 용량 업데이트
@@ -121,6 +119,8 @@ The maximum-flow problem aims to find a flow f of maximum value from the source 
 - 1->4의 잔여 용량은 0(8-8)
 - 4->t의 잔여 용량은 2(10-8)
 
+- 흐름 f(s->1): 8
+
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/aea266f9-03f9-4a5e-87b5-e329a6bbea5c" width=600>
 
 4. 반복: 더 이상 증강 경로를 찾을 수 없을 때까지 증강 경로를 찾고 흐름을 증가시킨다.
@@ -128,5 +128,22 @@ The maximum-flow problem aims to find a flow f of maximum value from the source 
 - 두번째 증강 경로: s->1->3->4->t
 - 경로를 따라 흐름이 2 증가: f(s->1) = 10, f(1->3) = 2, f(3->4)=2, f(4->t) = 10
 
+- 흐름 f(s->1): 10
 
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/cddf49ad-52ed-414c-aaab-a5a49fd3c3ff" width=600>
+
+- 세번째 증강 경로: s->3->4->2->t
+- 경로를 따라 흐름이 6 증가: f(s->3) = 6, f(3->4) = 8, f(4->2) = 6, f(2->t) = 6
+
+- 흐름 f(s->2): 6
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/ce3d0898-8e22-498f-aebd-87c112ed64d9" width=600>
+
+5. 최종 흐름 값
+
+- 소스 s에서 나가는 흐름의 합은 최종 흐름 값이다. 이 경우, val(f) = f(s->1) + f(s->2) = 10+6 = 16
+
+- 하지만, 주어진 그래프에서 s에서 t로 가는 최대 흐름은 19이다.
+
+  <img src="https://github.com/yshghid/Algorithm/assets/153489198/32202c59-794c-4cc6-855c-727ad91724b7" width=600>
 
