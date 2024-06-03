@@ -11,7 +11,7 @@
 
 ## Minimum-cut problem
 
-- st-cut은 V를 두 부분으로 나누는 것이다. 하나의 부분 집합에는 노드 s가 포함되고, 다른 부분 집합에는 노드 t가 포함된다.
+- st-cut은 노드 집합 V를 두 부분으로 나누는 것이다. 하나의 부분 집합에는 노드 s가 포함되고, 다른 부분 집합에는 노드 t가 포함된다.
 - cut의 용량은 A에서 B로 가는 에지들의 용량의 합이다.
 
 <image src="https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2" width = "600">
