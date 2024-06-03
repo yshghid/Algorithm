@@ -62,7 +62,6 @@
 - s->1의 잔여 용량은 2(10-8)
 - 1->4의 잔여 용량은 0(8-8)
 - 4->t의 잔여 용량은 2(10-8)
-
 - 흐름 f(s->1): 8
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/aea266f9-03f9-4a5e-87b5-e329a6bbea5c" width=600>
@@ -71,7 +70,6 @@
 
 - 두번째 증강 경로: s->1->3->4->t
 - 경로를 따라 흐름이 2 증가: f(s->1) = 10, f(1->3) = 2, f(3->4)=2, f(4->t) = 10
-
 - 흐름 f(s->1): 10
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/cddf49ad-52ed-414c-aaab-a5a49fd3c3ff" width=600>
