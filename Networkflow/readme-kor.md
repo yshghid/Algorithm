@@ -225,6 +225,7 @@ cf) 다섯번째 업데이트의 효과: (4->1) 로 유량을 1 증가시키는 
 - 최소 컷: 노드 집합 V를 A, B로 나눌 때, A에서 B로 가는 에지들의 용량의 합이 최소가 되도록 나누는 컷
 
 ### 유량 값 보조정리 (Flow value lemma)
+
 - 임의의 유량 f와 임의의 컷 (A,B)가 주어졌을 때, 유량 f(소스에서 싱크로 흐르는 총 유량)는 컷 (A,B)를 통해 흐르는 순 유량(net flow across cut)과 같다.
 - 컷 (A,B)를 통해 흐르는 순 유량 (net flow accross cut (A,B)): (A->B 로 흐르는 유량의 합) - (B->A 로 흐르는 유량의 합)
 
@@ -234,11 +235,21 @@ cf) 다섯번째 업데이트의 효과: (4->1) 로 유량을 1 증가시키는 
 - 순 유량(net flow across cut): (10 + 10 + 5 + 10 + 0 + 0) – (5 + 5 + 0 + 0) = 25
 - 총 유량: 25
 
-### 약한 쌍대성 (Weak duality
+### 약한 쌍대성 (Weak duality)
 
-- 임의의 유량 f와 임의의 컷 (A,B)에 대해, 유량의 값 val(f)은 컷의 용량 cap(A,B)보다 작거나 같다.
+- 유량 f와 컷 (A,B)에 대해, 유량의 값 val(f)은 컷의 용량 cap(A,B)보다 작거나 같다.
 
+### 최적성 보장 (Certificate of optimality)
 
+- 유량 f와 컷 (A,B)에 대해, val(f) = cap(A,B) 라면 f는 최대 유량이고 (A,B)는 최소 컷이다.
 
+- 증명 방법
+1. val(f) = cap(A,B)일때, f는 최대 유량이다.
+2. val(f) = cap(A,B)일때, (A,B)는 최소 컷이다.
+
+- 증명 1: weak duality에 따라, 임의의 유량 f'에 대해 val(f') <= cap(A,B) 이다. 따라서 val(f') <= cap(A,B) = val(f) 이므로 val(f) = cap(A,B)일때, f는 최대 유량이다.
+- 증명 2: weak duality에 따라, 임의의 컷 (A',B')에 대해 cap(A',B') >= cap(A,B) 이다. cap(A,B)는 네트워크의 최대 유량과 같기 때문이다. 따라서, cap(A',B') >= val(f) = cap(A,B) 이므로 val(f) = cap(A,B)일때, (A,B)는 최소 컷이다.
+
+### 최소 컷 최대 유량 정리 증명 (Max-flow min-cut theorem)
 
 
