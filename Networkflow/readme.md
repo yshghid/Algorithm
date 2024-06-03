@@ -2,10 +2,8 @@
 
 ## Flow network
 
-#### A flow network is a tuple G = (V, E, s, t, c).
-
-- Digraph (V, E) with source s ∈ V and sink t ∈ V
-; assume all nodes are reachable from s
+- A flow network is a tuple G = (V, E, s, t, c).
+- Digraph (V, E) with source s ∈ V and sink t ∈ V; assume all nodes are reachable from s
 - Capacity c(e) ≥ 0 for each e ∈ E.
 - Intuition. Material flowing through a transportation network; material originates at source and is sent to sink.
 
@@ -14,10 +12,8 @@
 
 ## Minimum-cut problem
 
-#### Def
-
-- Def. An st-cut (cut) is a partition (A, B) of the nodes with s ∈ A and t ∈ B.
-- Def. Its capacity is the sum of the capacities of the edges from A to B.
+- An st-cut (cut) is a partition (A, B) of the nodes with s ∈ A and t ∈ B.
+- Its capacity is the sum of the capacities of the edges from A to B.
 
 <image src="https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2" width = "600">
 
@@ -49,7 +45,7 @@ In the figure, which is the capacity of the given *st*-cut?
 
 The maximum-flow problem aims to find a flow f of maximum value from the source s to the sink t.
 
-#### Greedy algorithm
+### Maximum-flow problem - Greedy algorithm
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/ccb9c791-78cb-4dda-af7d-ac62989401b0" width=600>
 
@@ -94,7 +90,7 @@ Find the maximum flow using a greedy algorithm.
 
   <img src="https://github.com/yshghid/Algorithm/assets/153489198/32202c59-794c-4cc6-855c-727ad91724b7" width=600>
 
-#### Why the greedy algorithm fails
+### Why the greedy algorithm fails
 
 Q. Why does the greedy algorithm fail?
 A. Once greedy algorithm increases flow on an edge, it never decreases it.
