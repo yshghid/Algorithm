@@ -2,8 +2,6 @@
 
 ## Flow network
 
-### 정의
-
 - 흐름 네트워크(flow network)는 튜플 G = (V, E, s, t, c) 이다. 
 - 소스(source) s ∈ V와 싱크(sink) t ∈ V가 존재하는 방향 그래프(Digraph) (V, E); 모든 노드가 s로부터 도달 가능한 것으로 가정함.
 - 각 e ∈ E에 대해 용량 c(e) ≥ 0.
