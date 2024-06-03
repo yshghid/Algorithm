@@ -1,6 +1,6 @@
 # Lec10. networkflow
 
-## Flow network
+## 흐름 네트워크 (Flow network)
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/d48e3832-3eb9-412d-968b-36847a6b4ddf" alt="Flow Network" width="600">
 
@@ -9,7 +9,7 @@
 - e ∈ E 일때 용량 c(e) ≥ 0.
 - 직관적 정의: 운송 네트워크를 통한 재료의 흐름. 재료는 소스에서 발생하여 싱크로 보내진다.
 
-## Minimum-cut problem
+## 최소 절단 문제 (Minimum-cut problem)
 
 - st-cut은 노드 집합 V를 두 부분으로 나누는 것이다. 하나의 부분 집합에는 노드 s가 포함되고, 다른 부분 집합에는 노드 t가 포함된다.
 - cut의 용량은 A에서 B로 가는 에지들의 용량의 합이다.
@@ -24,7 +24,7 @@
 - 위 그림에서 {s, 3, 5, 6} = A, {1, 2, 4, t} = B
 - st-cut의 용량: 10(s→1) + 8(3→4) + 10(6→t) = 28
 
-## Maximum-flow problem
+## 최대 흐름 문제 (Maximum-flow problem)
 
 최대 흐름 문제는 소스 s에서 싱크 t로 가는 최대 값을 가진 흐름 f를 찾는 것이다.
 
@@ -88,7 +88,7 @@ A: 한 번 에지에 흐름을 증가시키면 이를 다시 줄일 수 없기 �
 - 올바른 최대 흐름은 v->w 에지를 사용하지 않는 다른 구성을 사용해야 함.
 - 그리디 알고리즘이 특정 엣지에 흐름을 잠그면 최적의 해결책을 찾을 수 없게 되므로 잘못된 결정을 "되돌릴" 수 있는 메커니즘이 필요.
 
-## Residual network
+## 잔여 네트워크(Residual network)
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/913302ff-b39b-4575-990b-0fbfb7ca0855" width=300>
 
