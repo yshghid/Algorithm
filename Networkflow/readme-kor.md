@@ -1,4 +1,4 @@
-# Lec10. networkflow
+# Lec10. Networkflow
 
 ## 흐름 네트워크 (Flow network)
 
