@@ -195,6 +195,6 @@ s --(2)--> 3 --(0)--> 1 --(3)--> 2 --(2)--> t
   <--[8]--   <--[2]--   <--[2]--   <--[8]--
 ```
 - 업데이트된 잔여 네트워크
-<img src="https://github.com/yshghid/Algorithm/assets/153489198/1c27ff3b-d9c8-4ba1-abf4-b3c40aedcffb">
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/1c27ff3b-d9c8-4ba1-abf4-b3c40aedcffb" width=600>
 
 - 네번째 업데이트의 효과: (3->1) 로 흐름을 2 증가시키는 것은 (1->3) 으로 흐름을 -2 증가시키는 것과 같기 때문에 두번째 업데이트에서 (1->3) 으로 흐름 2 증가되었던 것이 취소되었다. 
