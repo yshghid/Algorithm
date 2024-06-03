@@ -2,7 +2,7 @@
 
 ## Flow network
 
-#### 정의
+### 정의
 
 - 흐름 네트워크(flow network)는 튜플 G = (V, E, s, t, c) 이다. 
 - 소스(source) s ∈ V와 싱크(sink) t ∈ V가 존재하는 방향 그래프(Digraph) (V, E); 모든 노드가 s로부터 도달 가능한 것으로 가정함.
@@ -47,7 +47,7 @@
 
 최대 흐름 문제는 소스 s에서 싱크 t로 가는 최대 값을 가진 흐름 f를 찾는 것이다.
 
-#### 최대 흐름 문제 - 그리디 알고리즘
+### 최대 흐름 문제 - 그리디 알고리즘
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/ccb9c791-78cb-4dda-af7d-ac62989401b0" width=600>
 
@@ -92,7 +92,7 @@
 
   <img src="https://github.com/yshghid/Algorithm/assets/153489198/32202c59-794c-4cc6-855c-727ad91724b7" width=600>
 
-#### 그리디 알고리즘이 실패하는 이유
+### 그리디 알고리즘이 실패하는 이유
 
 Q: 그리디 알고리즘이 실패하는 이유는?
 
