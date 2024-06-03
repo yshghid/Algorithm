@@ -11,15 +11,13 @@
 
 ## Minimum-cut problem
 
-- st-절단(또는 절단)은 노드 집합을 두 부분으로 나누는 것이다. 하나의 부분 집합에는 노드 s가 포함되고, 다른 부분 집합에는 노드 t가 포함된다.
-
-- 절단의 용량은 A에서 B로 가는 에지들의 용량의 합이다.
+- st-cut은 V를 두 부분으로 나누는 것이다. 하나의 부분 집합에는 노드 s가 포함되고, 다른 부분 집합에는 노드 t가 포함된다.
+- cut의 용량은 A에서 B로 가는 에지들의 용량의 합이다.
 
 <image src="https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2" width = "600">
 
-그림에서, {s} = *A* 와 {1,2,3,4,5,6,t} = *B* 이고 이 st-cut의 용량은 다음과 같다.
-
-- capacity = 10(s→1) + 5(s→3) + 15(s→5) = 30
+- {s} = *A* 와 {1,2,3,4,5,6,t} = *B*
+- st-cut의 용량: 10(s→1) + 5(s→3) + 15(s→5) = 30
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/abe1a54d-8cee-4fe3-974a-c0d76062bcb8" width = "600">
 
