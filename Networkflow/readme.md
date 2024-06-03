@@ -70,7 +70,6 @@ Find the maximum flow using a greedy algorithm.
 - Residual capacity of s->1 becomes 2 (10-8)
 - Residual capacity of 1->4 becomes 0 (8-8)
 - Residual capacity of 4->t becomes 2 (10-8)
-
 - Flow value f(s->1): 8
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/aea266f9-03f9-4a5e-87b5-e329a6bbea5c" width=600>
@@ -79,14 +78,12 @@ Find the maximum flow using a greedy algorithm.
 
 - Second Augmenting Path: s->1->3->4->t
 - Update flow along the path(+2): f(s->1) = 10, f(1->3) = 2, f(3->4)=2, f(4->t) = 10
-
 - Flow value f(s->1): 10
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/cddf49ad-52ed-414c-aaab-a5a49fd3c3ff" width=600>
 
 - Third Augmenting Path: s->3->4->2->t
 - Update flow along the path(+6): f(s->3) = 6, f(3->4) = 8, f(4->2) = 6, f(2->t) = 6
-
 - Flow value f(s->2): 6
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/ce3d0898-8e22-498f-aebd-87c112ed64d9" width=600>
