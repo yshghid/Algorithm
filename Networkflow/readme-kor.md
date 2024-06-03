@@ -2,12 +2,12 @@
 
 ## Flow network
 
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/d48e3832-3eb9-412d-968b-36847a6b4ddf" alt="Flow Network" width="600">
+
 - G = (V, E, s, t, c)
-- 소스(source) s ∈ V와 싱크(sink) t ∈ V가 존재하는 방향 그래프(Digraph) (V, E); 모든 노드가 s로부터 도달 가능한 것으로 가정함.
+- 소스(source) s ∈ V와 싱크(sink) t ∈ V가 존재하는 방향 그래프 (V, E); 모든 노드가 s로부터 도달 가능한 것으로 가정함.
 - 각 e ∈ E에 대해 용량 c(e) ≥ 0.
 - 직관적 정의: 운송 네트워크를 통한 재료의 흐름. 재료는 소스에서 발생하여 싱크로 보내진다.
-
-<img src="https://github.com/yshghid/Algorithm/assets/153489198/d48e3832-3eb9-412d-968b-36847a6b4ddf" alt="Flow Network" width="600">
 
 ## Minimum-cut problem
 
