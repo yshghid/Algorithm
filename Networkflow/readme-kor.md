@@ -16,18 +16,17 @@
 
 <image src="https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2" width = "600">
 
-- {s} = *A* 와 {1,2,3,4,5,6,t} = *B*
+- 위 그림에서 {s} = *A*, {1,2,3,4,5,6,t} = *B*
 - st-cut의 용량: 10(s→1) + 5(s→3) + 15(s→5) = 30
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/abe1a54d-8cee-4fe3-974a-c0d76062bcb8" width = "600">
 
-그림에서, {s, 3, 5, 6} = A 와 {1, 2, 4, t} = B 이고 이 st-cut의 용량은 다음과 같다.
-
-- capacity = 10(s→1) + 8(3→4) + 10(6→t) = 28
+- 위 그림에서 {s, 3, 5, 6} = A, {1, 2, 4, t} = B
+- st-cut의 용량: 10(s→1) + 8(3→4) + 10(6→t) = 28
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/daa372e3-8171-4081-9979-766c4efc5316" width = "600">
 
-그림에서, 주어진 st-cut의 용량은?
+- 그림에서, 주어진 st-cut의 용량은?
 
 **A.** 11 (20 + 25 − 8 − 11 − 9 − 6)
 
