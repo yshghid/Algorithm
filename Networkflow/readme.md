@@ -72,4 +72,31 @@ Which is the capacity of the given *st*-cut?
 
 ## Maximum-flow problem
 
+#### Def
+
+- Def: An st-flow(flow) f in a network is defined as a function that assigns a flow value to each edge, adhering to the following conditions:
+
+1) Capacity Constraint: For each edge e∈E, the flow f(e) must be less than or equal to the capacity c(e) of that edge.
+
+2) Flow Conservation: For each node v∈V - {st} , the sum of the flows into v must equal the sum of the flows out of v. This is also known as the conservation of flow.
+
+- The value of a flow f is the total flow leaving the source s, which is the same as the total flow entering the sink t.
+
+#### 정의
+
+- 정의: st-흐름(흐름) f는 네트워크 내의 각 에지에 흐름 값을 할당하는 함수로, 다음 조건을 만족한다:
+
+1) 용량 제약: 각 에지 e∈E 에 대해 흐름 f(e) 는 해당 에지의 용량 c(e) 보다 작거나 같아야 한다.
+
+2) 흐름 보존: 소스 노드 s와 싱크 노드 t를 제외한 모든 노드 v∈V - {st} 에 대해, v로 들어오는 흐름의 합은 v에서 나가는 흐름의 합과 같아야 한다.
+
+- 정의: 흐름의 값 f는 소스 s에서 나가는 총 흐름으로, 이는 싱크 t로 들어오는 총 흐름과 동일하다.
+
+#### Maximum-flow problem
+
+The maximum-flow problem aims to find a flow f of maximum value from the source s to the sink t.
+
+#### 최대 흐름 문제
+
+최대 흐름 문제는 소스 s에서 싱크 t로 가는 최대 값을 가진 흐름 f를 찾는 것이다.
 
