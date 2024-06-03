@@ -26,7 +26,7 @@
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/daa372e3-8171-4081-9979-766c4efc5316" width = "600">
 
-- 그림에서, 주어진 st-cut의 용량은?
+Q) 그림에서, 주어진 st-cut의 용량은?
 
 **A.** 11 (20 + 25 − 8 − 11 − 9 − 6)
 
@@ -36,7 +36,7 @@
 
 **D.** 79 (20 + 25 + 8 + 11 + 9 + 6)
 
-- capacity = 20(s→1) + 25(6→t) = 45
+A) C: capacity = 20(s→1) + 25(6→t) = 45
 
 ## Maximum-flow problem
 
