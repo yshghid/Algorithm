@@ -101,3 +101,32 @@ The maximum-flow problem aims to find a flow f of maximum value from the source 
 
 최대 흐름 문제는 소스 s에서 싱크 t로 가는 최대 값을 가진 흐름 f를 찾는 것이다.
 
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/ccb9c791-78cb-4dda-af7d-ac62989401b0" width=600>
+
+그림에서 최대 흐름을 그리디 알고리즘으로 찾기. 
+
+1. 초기 상태: 모든 e∈E 에 대해 f(e)는 0으로 시작한다.
+
+2. 첫번째 증강 경로: 양수 잔여 용량이 있는 경로를 찾는다. 즉 각 에지에서 f(e)<c(e) 인 경로를 찾는다.
+
+- 경로 s->1->4->t
+
+- 경로의 최소 잔여 용량: min(10, 8, 10) = 8
+
+- 경로를 따라 흐름이 8 증가: f(s->1) = 8, f(1->4) = 8, f(4->t) = 8
+
+3. 잔여 용량 업데이트
+
+- s->1의 잔여 용량은 2(10-8)
+- 1->4의 잔여 용량은 0(8-8)
+- 4->t의 잔여 용량은 2(10-8)
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/aea266f9-03f9-4a5e-87b5-e329a6bbea5c" width=600>
+
+4. 반복: 더 이상 증강 경로를 찾을 수 없을 때까지 증강 경로를 찾고 흐름을 증가시킨다.
+
+- 두번째 증강 경로: s->1->3->4->t
+- 경로를 따라 흐름이 2 증가: f(s->1) = 10, f(1->3) = 2, f(3->4)=2, f(4->t) = 10
+
+
+
