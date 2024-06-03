@@ -95,7 +95,7 @@ Find the maximum flow using a greedy algorithm.
 
 - The sum of the flows out of s is the maximum flow value, which in this case is: val(f) = f(s->1) + f(s->2) = 10+6 = 16
 
-- But max-flow value maximum flow from s to t in the given graph is 19.
+6. But max-flow value maximum flow from s to t in the given graph is 19.
 
   <img src="https://github.com/yshghid/Algorithm/assets/153489198/32202c59-794c-4cc6-855c-727ad91724b7" width=600>
 
