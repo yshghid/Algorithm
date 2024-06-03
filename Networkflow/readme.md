@@ -105,3 +105,11 @@ Ex. Consider flow network G.
 - Because the greedy algorithm locks in flow on certain edges, it cannot find the optimal solution, thus a mechanism to "undo" bad decisions is necessary.
 
 ## Residual network
+
+- In the flow network G, the original edge e has the property of flow f(e) (the current flow passing through the edge) and capacity c(e) (the maximum flow that the edge can handle).
+- The residual network Gf includes a reverse edge e(reverse). The reverse edge allows for the "undoing" of the flow sent through the original edge e.
+- The residual capacity of the original edge e in the residual network is cf(e) = c(e)-f(e), which represents the remaining capacity to increase the flow in the original direction.
+- The residual capacity of the reverse edge e(reverse) in the residual network is cf(e(reverse)) = f(e), which represents the capacity to decrease the flow in the reverse direction.
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/913302ff-b39b-4575-990b-0fbfb7ca0855" width=300>
+
