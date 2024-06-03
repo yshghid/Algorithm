@@ -20,11 +20,15 @@
 
 ## Minimum-cut problem
 
-#### Def. An st-cut (cut) is a partition (A, B) of the nodes with s ∈ A and t ∈ B.
-#### Def. Its capacity is the sum of the capacities of the edges from A to B.
+#### Def
 
-#### 정의: st-절단(절단)은 노드를 s ∈ A와 t ∈ B로 나누는 것입니다.
-#### 정의: st-절단의 용량은 A에서 B로 이어지는 에지들의 용량의 합입니다.
+- Def. An st-cut (cut) is a partition (A, B) of the nodes with s ∈ A and t ∈ B.
+- Def. Its capacity is the sum of the capacities of the edges from A to B.
+
+#### 정의
+
+- 정의: st-절단(절단)은 노드를 s ∈ A와 t ∈ B로 나누는 것입니다.
+- 정의: st-절단의 용량은 A에서 B로 이어지는 에지들의 용량의 합입니다.
 
 ![image](https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2)
 
