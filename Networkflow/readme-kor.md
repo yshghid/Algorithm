@@ -2,16 +2,20 @@
 
 ## Flow network
 
-#### 흐름 네트워크(flow network)는 튜플 G = (V, E, s, t, c) 이다. 
+#### 정의
 
-- 소스(source) s ∈ V와 싱크(sink) t ∈ V가 존재하는 방향 그래프(Digraph) (V, E).
-; 모든 노드가 s로부터 도달 가능한 것으로 가정함.
+- 흐름 네트워크(flow network)는 튜플 G = (V, E, s, t, c) 이다. 
+- 소스(source) s ∈ V와 싱크(sink) t ∈ V가 존재하는 방향 그래프(Digraph) (V, E); 모든 노드가 s로부터 도달 가능한 것으로 가정함.
 - 각 e ∈ E에 대해 용량 c(e) ≥ 0.
-직관. 운송 네트워크를 통한 재료의 흐름; 재료는 소스에서 발생하여 싱크로 보내진다.
+- 직관적 정의: 운송 네트워크를 통한 재료의 흐름. 재료는 소스에서 발생하여 싱크로 보내진다.
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/d48e3832-3eb9-412d-968b-36847a6b4ddf" alt="Flow Network" width="600">
 
 ## Minimum-cut problem
+
+- st-절단(또는 절단)은 노드 집합을 두 부분으로 나누는 것이다. 하나의 부분 집합에는 노드 s가 포함되고, 다른 부분 집합에는 노드 t가 포함된다.
+
+- 절단의 용량은 A에서 B로 가는 에지들의 용량의 합이다.
 
 <image src="https://github.com/yshghid/Algorithm/assets/153489198/ac535761-d3e3-4475-9982-f2b1f991b8e2" width = "600">
 
