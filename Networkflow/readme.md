@@ -96,3 +96,11 @@ Find the maximum flow using a greedy algorithm.
 
   <img src="https://github.com/yshghid/Algorithm/assets/153489198/32202c59-794c-4cc6-855c-727ad91724b7" width=600>
 
+#### Why the greedy algorithm fails
+
+Q. Why does the greedy algorithm fail?
+A. Once greedy algorithm increases flow on an edge, it never decreases it.
+
+Ex. Consider flow network G.
+・ The unique max flow f * has f*(v, w) = 0.
+・ Greedy algorithm could choose s→v→w→t as first path.
