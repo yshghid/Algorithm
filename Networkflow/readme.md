@@ -31,11 +31,9 @@ In the figure, {s, 3, 5, 6} = A and {1, 2, 4, t} = B, and the capacity of this s
 
 - capacity = 10(s→1) + 8(3→4) + 10(6→t) = 28
 
-#### Nextflow - quiz 1
-
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/daa372e3-8171-4081-9979-766c4efc5316" width = "600">
 
-Which is the capacity of the given *st*-cut?
+In the figure, which is the capacity of the given *st*-cut?
 
 **A.** 11 (20 + 25 − 8 − 11 − 9 − 6)
 
