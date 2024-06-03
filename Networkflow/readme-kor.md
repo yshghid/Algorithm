@@ -80,7 +80,6 @@
 
 - 세번째 증강 경로: s->3->4->2->t
 - 경로를 따라 흐름이 6 증가: f(s->3) = 6, f(3->4) = 8, f(4->2) = 6, f(2->t) = 6
-
 - 흐름 f(s->2): 6
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/ce3d0898-8e22-498f-aebd-87c112ed64d9" width=600>
