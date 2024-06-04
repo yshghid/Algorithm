@@ -28,7 +28,7 @@
 
 최대 유량 문제는 소스 s에서 싱크 t로 가는 최대 값을 가진 유량 f를 찾는 것이다.
 
-### 최대 유량 문제 - 그리디 알고리즘
+### 그리디 알고리즘으로 최대 유량 찾기
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/ccb9c791-78cb-4dda-af7d-ac62989401b0" width=600>
 
@@ -125,7 +125,7 @@ val(f') = val(f) + bottleneck(Gf,P)
 ```
 - 새로운 흐름 f'의 값은 원래 유량 f에 병목 용량을 더한 것과 같다.
 
-### 최대 유량 문제 - 퍼드 포커슨 알고리즘
+### 퍼드 포커슨 알고리즘으로 최대 유량 찾기
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/2f2c8bb4-5213-4a4c-b36c-2763f9a64616" width=600>
 
