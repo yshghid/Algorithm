@@ -184,4 +184,31 @@ RETURN M[n, W].
 
 - 위 그림에서, 두 정렬 CTACCG 와 TACATG 의 최소 비용 정렬 M = { x2–y1, x3–y2, x4–y3, x5–y4, x6–y6 } 이다.
 
-### 최소 비용 정렬 계산
+### 하향식(bottom-up) 알고리즘
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/8e710f1b-c311-42b3-b31a-6f139321ad81" width=600>
+
+Q. 두 문자열 S=strong, T=stone 이 존재한다. 이때 stro, sto를 정렬하는 최소 비용 (OPT(4,3))은?
+A. 세 경우 중 하나이다.
+
+- 문자열 stro와 st의 정렬 비용 OPT(4,2) + 문자 o를 추가하는 비용
+- 문자열 str와 sto의 정렬 비용 OPT(3,3) + 문자 o를 버리는 비용(이 경우 문자가 일치하므로 비용이 없음)
+- 문자열 str와 st의 정렬 비용 OPT(3,2) + 문자 o를 다른 문자 o로 교체하는 비용(교체 비용이 없음)
+
+#### 슈도코드
+```
+SEQUENCE-ALIGNMENT(m, n, x1, …, xm, y1, …, yn, δ, α)
+FOR i = 0 TO m
+  M [i, 0] ← iδ.
+FOR j = 0 TO n
+  M [0, j] ← jδ.
+FOR i = 1 TO m
+  FOR j = 1 TO n
+    M [i, j] ← min{αxiyj + M[i–1,j–1], δ + M[i–1,j], δ + M [i,j–1]}.
+RETURN M [m, n].
+```
+- M[i,j] 계산: xi 또는 yj가 갭으로 처리될 경우, 갭 비용 δ을 이전 행 또는 열의 값(M[i–1, j] 또는 M[i, j-1]에 더한 값이 가능하다. xi와 yj가 매치되고 불일치할 경우 αxiyj + 이전 대각선 셀의 값(M[i–1, j–1]) 이 가능하다. 셋 중 최솟값이 할당된다.
+- 시간 복잡도: M[i,j] 계산 O(mn) (m,n: 두 문자열의 길이)
+
+
+## 
