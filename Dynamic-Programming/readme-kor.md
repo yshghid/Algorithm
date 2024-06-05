@@ -39,6 +39,7 @@ COMPUTE-OPT
 시간 복잡도
 - BRUTE-FORCE: 정렬 O(nlogn), 이진 탐색 O(nlogn)
 - COMPUTE-OPT: 재귀적 호출 O(2^n)
+- 최악의 경우(worst case) 총 시간 복잡도: O(2^n), COMPUTE-OPT에 의해 지배됨. 
 
 ### 메모이제이션 (memoization)
 
@@ -46,14 +47,40 @@ COMPUTE-OPT
 
 #### 슈도코드
 ```
-BOTTOM-UP(n, s1, …, sn, f1, …, fn, w1, …, wn)
+TOP-DOWN(n, s1, …, sn, f1, …, fn, w1, …, wn)
 Sort jobs by finish time and renumber so that f1 ≤ f2 ≤ … ≤ fn.
-Compute p[1], p[2], …, p[n].
+Compute p[1], p[2], …, p[n] via binary search.
 M[0] ← 0.
-FOR j = 1 TO n
-  M[j] ← max {M[j – 1], wj + M[p[j]]}.
+RETURN M-COMPUTE-OPT(n).
+
+M-COMPUTE-OPT(j)
+IF (M[j] is uninitialized)
+  M[j] ← max {M-COMPUTE-OPT (j – 1), wj + M-COMPUTE-OPT(p[j])}.
+RETURN M[j].
+
+FIND-SOLUTION(j)
+IF (j = 0)
+  RETURN ∅.
+ELSE IF (wj + M[p[j]] > M[j – 1])
+  RETURN {j} ∪ FIND-SOLUTION(p[j]).
+ELSE
+  RETURN FIND-SOLUTION(j – 1).
 ```
-BOTTOM-UP
+
+TOP-DOWN
 - 정렬: 종료 시간 fj에 따라 작업을 정렬
 - 이진 탐색: 작업 j와 호환되는 마지막 작업 p[j]를 계산
-- 동적 프로그래밍: M[j]에 값을 할당하기. 
+
+M-COMPUTE-OPT
+- 동적 프로그래밍: j–1와 p[j]에 대해 M-COMPUTE-OPT를 호출. M[j]를 계산
+
+FIND-SOLUTION
+- 재귀 호출: j–1와 p[j]에 대해 M[j]를 호출. 각 j에 대해 최댓값 선택.
+
+시간 복잡도
+- TOP-DOWN: 정렬 O(nlogn), 이진 탐색 O(nlogn)
+- M-COMPUTE-OPT: 동적 프로그래밍 O(n)
+- FIND-SOLUTION: 
+- 최악의 경우 총 시간 복잡도: O(nlogn), TOP-DOWN에 의해 지배됨.
+
+
