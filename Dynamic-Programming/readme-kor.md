@@ -108,7 +108,6 @@ FIND-SOLUTION
 - eij: i번째 데이터 포인트부터 j번째 데이터 포인트까지의 최소 오차. 즉, 마지막 세그먼트의 SSE
 - c: 세그먼트 추가에 드는 고정 비용
 - OPT(j) = min(1≤i≤j){OPT(i−1) + eij + c}
-- OPT(i−1)가 계산된 상태에서, 마지막 세그먼트가 시작되는 위치 i에서 시작해서 j에서 끝나는 세그먼트를 찾을 건데, 최소 비용 OPT(j) 찾기. 
 
 #### 슈도코드
 
@@ -117,11 +116,14 @@ SEGMENTED-LEAST-SQUARES(n, p1, …, pn, c)
 FOR j = 1 TO n
   FOR i = 1 TO j
     Compute the SSE eij for the points pi, pi+1, …, pj.
+M[0] ← 0.
 FOR j = 1 TO n
-  FOR i = 1 TO j
-    Compute the SSE eij for the points pi, pi+1, …, pj.
+  M[j] ← min 1 ≤ i ≤ j { eij + c + M[i – 1] }.
+RETURN M[n].
 ```
-- 
+- SSE 계산: n개의 데이터 포인트가 있을때 세그먼트의 시작과 끝 (i,j)의 모든 조합에 대해서 (pi, pi+1, ..., pj)의 SSE 계산
+- M[j] 계산: 현재 끝 j에 대해 가능한 모든 i에 대해 해당 세그먼트의 SSE(eij), 세그먼트 추가 비용(c), 그리고 이전 점까지의 최소 비용(M[i-1])의 합이 최소가 되는 값을 M[j]로 할당한다.
+- 시간 복잡도: SSE 계산 O(n^3), M[j] 계산 O(n^2)
 
-
+## Knapsack 문제
 
