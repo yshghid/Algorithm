@@ -229,8 +229,22 @@ A.
 - OPT(i, v) = 최대 i개의 간선을 사용하는 v에서 t까지의 최단 경로의 길이 -> o. 이 정의는 Bellman-Ford 방식의 반복적인 에지 완화 과정과 일치하며, i번째까지의 간선을 사용하여 최단 경로를 점진적으로 구축하는 데 적합하다.
 
 #### 슈도코드
+```
+SHORTEST-PATHS(V, E, ℓ, t)
+FOREACH node v ∈ V :
+  M [0, v] ← ∞.
+M [0, t] ← 0.
+FOR i=1 TO n–1
+  FOREACH node v ∈ V :
+    M [i, v] ← M [i–1, v].
+    FOREACH edge (v, w) ∈ E :
+      M[i, v] ← min{M[i, v], M[i–1, w] + ℓvw}.
+```
 
-#### 보조정리
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/38d6b1af-4dd7-480d-b018-a1c3abf06041" width=600>
 
+- M[i,v] 계산: 방향이 v->w->t 라고 할때, v->w의 가중치(lvw)에 w->t의 최단 경로값(M[i-1,w])을 더한 값을 구해서, 현재 최단 경로값 M[i,v] 와 비교하여 더 작은 값을 선택한다.
+- 시간 복잡도: M[i,v] 계산 O(nm) (m은 에지의 수, n은 노드의 수)
 
 ### 음수 그래프 음수 사이클 찾기
+
