@@ -112,7 +112,16 @@ FIND-SOLUTION
 
 #### 슈도코드
 
-
+```
+SEGMENTED-LEAST-SQUARES(n, p1, …, pn, c)
+FOR j = 1 TO n
+  FOR i = 1 TO j
+    Compute the SSE eij for the points pi, pi+1, …, pj.
+FOR j = 1 TO n
+  FOR i = 1 TO j
+    Compute the SSE eij for the points pi, pi+1, …, pj.
+```
+- 
 
 
 
