@@ -17,8 +17,11 @@
 
 ### COMPUTE-OPT(n) 에서 최악의 경우?
 A. Θ(n log n)
+
 B. Θ(n2)
+
 C. Θ(1.618n)
+
 D. Θ(2n)
 ```
 COMPUTE-OPT(j)
