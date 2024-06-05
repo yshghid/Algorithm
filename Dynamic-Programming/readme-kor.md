@@ -9,7 +9,7 @@
 - 작업 j는 시작 시간 sj, 종료 시간 fj, 가중치 wj를 갖는다.
 - 상호 호환 가능한 작업들 중 최대 가중치의 부분 집합을 찾는다. ("호환": 두 작업이 겹치지 않음)
 
-### 이진 선택 (Binary Choice)
+### 동적 프로그래밍 - 이진 선택 (Binary Choice)
 
 - OPT(j): 첫번째부터 j번째 작업까지 호환 가능한 작업들 중 최대 가중치
 - OPT(j) = max(OPT(j-1),OPT(p(j)+wj)
@@ -142,8 +142,16 @@ RETURN M[n].
 - OPT(i): 처음 i개의 아이템만 고려할 때의 배낭 문제의 최적 가치.
 - OPT(i, w): 처음 i개의 아이템과 무게 한도 w를 고려하는 배낭 문제의 최적 가치. 
 
-### Two variables
-
-- 
+### 동적 프로그래밍 - 두가지 변수(Two variables)
 
 #### 슈도코드
+```
+KNAPSACK(n, W, w1, …, wn, v1, …, vn )
+FOR w = 0 TO W
+  M[0, w] ← 0.
+FOR i = 1 TO n
+  FOR w = 0 TO W
+    IF (wi > w) M[i, w] ← M[i – 1, w].
+    ELSE M[i, w] ← max { M[i – 1, w], vi + M[i – 1, w – wi] }.
+RETURN M[n, W].
+```
