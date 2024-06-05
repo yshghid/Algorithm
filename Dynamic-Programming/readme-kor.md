@@ -88,7 +88,7 @@ FIND-SOLUTION
 
 ## 세그먼티드 최소 제곱법 (Segmented Least Squares)
 
-### 최소 제곱법
+최소 제곱법
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/4b50581c-7dd8-4ee0-8b16-7106b3d091b4" width=600>
 
 - 위의 주어진 데이터 포인트에 가장 잘 맞는 직선 f(x) 찾기: 데이터 포인트와 직선 사이의 오차를 최소화해서 찾는다.
