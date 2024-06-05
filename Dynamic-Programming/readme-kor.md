@@ -9,7 +9,7 @@
 - 작업 j는 시작 시간 sj, 종료 시간 fj, 가중치 wj를 갖는다.
 - 상호 호환 가능한 작업들 중 최대 가중치의 부분 집합을 찾는다. ("호환": 두 작업이 겹치지 않음)
 
-### 동적 프로그래밍의 이진 선택 (Dynamic Programming: Binary Choice)
+### 이진 선택 (Binary Choice)
 
 - OPT(j): 첫번째부터 j번째 작업까지 호환 가능한 작업들 중 최대 가중치
 - OPT(j) = max(OPT(j-1),OPT(p(j)+wj)
