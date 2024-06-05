@@ -178,7 +178,7 @@ RETURN M[n, W].
 - 정렬 M의 비용은 불일치 비용(αxiyj) + 갭 비용(δ)으로 계산된다.
 - <img src="https://github.com/yshghid/Algorithm/assets/153489198/ad551dad-a241-40b4-ab9a-decbe3735339" width=300>
 
-<img src="https://github.com/yshghid/Algorithm/assets/153489198/b1b39d69-ac33-48ee-ad16-d4b11244bb6d" width=300> 
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/b1b39d69-ac33-48ee-ad16-d4b11244bb6d" width=500> 
 
 - 위 그림에서, 두 정렬 CTACCG 와 TACATG 의 최소 비용 정렬 M = { x2–y1, x3–y2, x4–y3, x5–y4, x6–y6 } 이다. 
 
