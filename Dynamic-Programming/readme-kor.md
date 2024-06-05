@@ -170,3 +170,21 @@ RETURN M[n, W].
 - 가치가 정수일 필요는 없음: 가치 값에 대한 가정은 명시적으로 사용되지 않는다.
 
 ## 시퀀스 정렬 (Sequence Alignment)
+
+#### 문자열 정렬
+
+- 문자열 정렬의 목표는 두 개의 문자열 사이의 최소 비용 정렬을 찾는 것이다.
+- 정렬 M은 두 문자열에서 선택된 순서쌍 (xi, yj)의 집합이다.
+- 정렬 M의 비용은 불일치 비용(αxiyj) + 갭 비용(δ)으로 계산된다.
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/ad551dad-a241-40b4-ab9a-decbe3735339" width=300>
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/b1b39d69-ac33-48ee-ad16-d4b11244bb6d" width=300>
+
+- 위 그림에서, 두 정렬 CTACCG 와 TACATG 의 최소 비용 정렬 M = { x2–y1, x3–y2, x4–y3, x5–y4, x6–y6 } 이다. 
+
+#### Levenshtein의 편집 거리 (Edit Distance)
+- 두 문자열을 서로 같게 만들기 위해 필요한 최소 편집 횟수. ("편집": 문자의 삽입, 삭제, 교체)
+- 편집 거리로 두 문자열 사이의 유사도를 계산할 수 있다.
+
+#### Needleman-Wunsch 알고리즘
+- 
