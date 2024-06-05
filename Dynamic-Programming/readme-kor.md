@@ -176,7 +176,6 @@ RETURN M[n, W].
 - 문자열 정렬의 목표는 두 개의 문자열 사이의 최소 비용 정렬을 찾는 것이다.
 - 정렬 M은 두 문자열에서 선택된 순서쌍 (xi, yj)의 집합이다.
 - 정렬 M의 비용은 불일치 비용(αxiyj) + 갭 비용(δ)으로 계산된다.
-- <img src="https://github.com/yshghid/Algorithm/assets/153489198/ad551dad-a241-40b4-ab9a-decbe3735339" width=300>
 
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/b1b39d69-ac33-48ee-ad16-d4b11244bb6d" width=500> 
 
