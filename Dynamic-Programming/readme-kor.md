@@ -84,3 +84,23 @@ FIND-SOLUTION
 - 최악의 경우 총 시간 복잡도: O(nlogn), TOP-DOWN에 의해 지배됨.
 
 
+## 세그먼티드 최소 제곱법 (Segmented Least Squares)
+
+### 최소 제곱법
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/4b50581c-7dd8-4ee0-8b16-7106b3d091b4" width=600>
+
+- 위의 주어진 데이터 포인트에 가장 잘 맞는 직선 f(x) 찾기: 데이터 포인트와 직선 사이의 오차를 최소화해서 찾는다.
+- "오차": SSE(Sum of Squared Errors)
+- 구하면 아래와 같음.
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/adbb9beb-391c-42c3-9c8c-0b557bc18c64" width=600>
+
+### 세그먼티드 최소 제곱법
+
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/50b6e71a-d517-4719-9b4f-2805ec13cc8f" width=600>
+- 위와 같이 데이터 포인트가 시간에 따라 다른 트렌드를 보이는 경우 각 트렌드를 여러 직선 세그먼트로 나타내는 함수가 주어진 데이터 포인트에 가장 잘 맞는다.
+- 위의 주어진 데이터 포인트에 가장 잘 맞는 함수 f(x) = E + cL 찾기: 모든 세그먼트의 제곱 오차의 합 E와 사용된 세그먼트 수 L의 합을 최소화해서 찾는다.
+
+#### 접근 방법
+<img src="https://github.com/yshghid/Algorithm/assets/153489198/c46da75e-5ad1-4cdc-b877-aaf745a1e2e1" width=300>
+
+-  
