@@ -75,12 +75,12 @@ M-COMPUTE-OPT
 - 동적 프로그래밍: j–1와 p[j]에 대해 M-COMPUTE-OPT를 호출. M[j]를 계산
 
 FIND-SOLUTION
-- 재귀 호출: j–1와 p[j]에 대해 M[j]를 호출. 각 j에 대해 최댓값 선택.
+- M[j] 역추적: j–1와 p[j]에 대해 M[j]를 호출. 각 j에 대해 최댓값 선택.
 
 시간 복잡도
 - TOP-DOWN: 정렬 O(nlogn), 이진 탐색 O(nlogn)
 - M-COMPUTE-OPT: 동적 프로그래밍 O(n)
-- FIND-SOLUTION: 
+- FIND-SOLUTION: M[j] 역추적 O(n)
 - 최악의 경우 총 시간 복잡도: O(nlogn), TOP-DOWN에 의해 지배됨.
 
 
