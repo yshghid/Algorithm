@@ -21,11 +21,11 @@ B. Θ(n2)
 C. Θ(1.618n)
 D. Θ(2n)
 ```
-COMPUTE-OPT( j )
+COMPUTE-OPT(j)
 IF (j = 0)
-RETURN 0.
+  RETURN 0.
 ELSE
-RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[ j ]) }.
+  RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[ j ]) }.
 ```
 - 이 함수의 특징은 각 j값에 대해 COMPUTE-OPT 함수를 두 번 호출한다는 것. 이러한 재귀적 호출은  함수가 기하급수적으로 증가하는 호출 트리를 생성할 수 있다.
 - 
