@@ -250,8 +250,25 @@ FOR i=1 TO n–1
 - Bellman-Ford 알고리즘의 시간 복잡도는 O(mn)(n개 노드에 대한 최단 경로 길이 계산), 공간 복잡도는 O(n)(n개 노드에 대한 최단 경로 길이 저장)이다.
 - 경로 길이 계산: O(n)으로 가능.
 - 최단 경로 저장: O(m+n)으로 가능.
+- 두 개의 1차원 배열을 사용하기.
 
 #### 슈도코드 2
+```
+BELLMAN–FORD–MOORE(V, E, c, t)
+FOREACH node v ∈ V :
+  d[v] ← ∞.
+  successor[v] ← null.
+d[t] ← 0.
+FOR i = 1 TO n – 1
+  FOREACH node w ∈ V :
+    IF (d[w] was updated in previous pass)
+      FOREACH edge (v, w) ∈ E :
+        IF (d[v] > d[w] + ℓvw)
+          d[v] ← d[w] + ℓvw.
+          successor[v] ← w.
+  IF (no d[⋅] value changed in pass i) STOP.
+```
+- 
 
 ### 음수 사이클 찾기
 
