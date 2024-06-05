@@ -104,4 +104,16 @@ FIND-SOLUTION
 #### 접근 방법
 <img src="https://github.com/yshghid/Algorithm/assets/153489198/c46da75e-5ad1-4cdc-b877-aaf745a1e2e1" width=300>
 
--  
+- 전체 데이터 포인트: p1-pj
+- OPT(i-1): i-1번째 데이터 포인트까지에 대해 계산된 최소 비용.
+- eij: i번째 데이터 포인트부터 j번째 데이터 포인트까지의 최소 오차. 즉, 마지막 세그먼트의 SSE
+- c: 세그먼트 추가에 드는 고정 비용
+- OPT(j) = min(1≤i≤j){eij + c + OPT(i−1)}
+- OPT(j)는 각 j에 대해 모든 가능한 i를 고려해서, 
+
+
+
+
+
+
+
