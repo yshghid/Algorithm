@@ -30,7 +30,7 @@ ELSE
   RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[j])}.
 ```
 BRUTE-FORCE
-- 종료 시간 fj에 따라 작업을 정렬
+- 정렬: 종료 시간 fj에 따라 작업을 정렬
 - 이진 탐색: 작업 j와 호환되는 마지막 작업 p[j]를 계산
 
 COMPUTE-OPT
@@ -42,3 +42,18 @@ COMPUTE-OPT
 
 ### 메모이제이션 (memoization)
 
+- 동적 프로그래밍에서 하향식(top-down) 접근 방식을 사용할 때 중복 계산을 피하기 위해 이미 해결된 부분 문제의 결과를 저장하고 재사용한다.
+
+#### 슈도코드
+```
+BOTTOM-UP(n, s1, …, sn, f1, …, fn, w1, …, wn)
+Sort jobs by finish time and renumber so that f1 ≤ f2 ≤ … ≤ fn.
+Compute p[1], p[2], …, p[n].
+M[0] ← 0.
+FOR j = 1 TO n
+  M[j] ← max {M[j – 1], wj + M[p[j]]}.
+```
+BOTTOM-UP
+- 정렬: 종료 시간 fj에 따라 작업을 정렬
+- 이진 탐색: 작업 j와 호환되는 마지막 작업 p[j]를 계산
+- 동적 프로그래밍: M[j]에 값을 할당하기. 
