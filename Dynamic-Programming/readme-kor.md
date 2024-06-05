@@ -15,21 +15,37 @@
 - OPT(j) = max(OPT(j-1),OPT(p(j)+wj)
 - 두 선택지 중 하나를 선택: j번째 작업을 선택하지 않으면 OPT(j-1)가 최적의 해. j번째 작업을 선택하면 j번째 작업과 호환 가능한 마지막 작업 p(j) 까지의 최대 가중치 OPT(p(j))에 wj를 더한 값이 최적의 해.
 
-### COMPUTE-OPT(n) 에서 최악의 경우?
-다음 중 COMPUTE-OPT(n) 에서 최악의 경우는?
-- Θ(n log n)
-- Θ(n2)
-- Θ(1.618n)
-- Θ(2n)
+#### 슈도코드
+
 ```
+BRUTE-FORCE (n, s1, …, sn, f1, …, fn, w1, …, wn)
+Sort jobs by finish time and renumber so that f1 ≤ f2 ≤ … ≤ fn.
+Compute p[1], p[2], …, p[n] via binary search.
+RETURN COMPUTE-OPT(n).
+
 COMPUTE-OPT(j)
 IF (j = 0)
   RETURN 0.
 ELSE
-  RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[j]) }.
+  RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[j])}.
 ```
-- 이 함수의 특징은 각 j값에 대해 COMPUTE-OPT 함수를 두 번 호출한다는 것. 이러한 재귀적 호출은  함수가 기하급수적으로 증가하는 호출 트리를 생성할 수 있다.
-- 
+- BRUTE-FORCE
+1. 종료 시간 fj에 따라 작업을 정렬
+2. 이진 탐색: 작업 j와 호환되는 마지막 작업 p[j]를 계산
 
-### 브루트 포스
+- COMPUTE-OPT
+1. 재귀적 호출: j–1와 p[j]에 대해 COMPUTE-OPT를 다시 호출. 각 j에 대해 최댓값 선택.
+
+- 시간 복잡도
+- BRUTE-FORCE: 정렬 O(nlogn), 이진 탐색 O(nlogn)
+- COMPUTE-OPT: 재귀적 호출 2^n
+
+#### COMPUTE-OPT(n) 에서 최악의 경우?
+Q. 다음 중 COMPUTE-OPT(n) 에서 최악의 경우 시간 복잡도는?
+- Θ(n log n)
+- Θ(n2)
+- Θ(1.618n)
+- Θ(2n)
+
+A. Θ(2n)
 
