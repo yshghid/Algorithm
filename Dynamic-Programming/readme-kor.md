@@ -15,7 +15,7 @@
 - OPT(j) = max(OPT(j-1),OPT(p(j)+wj)
 - 두 선택지 중 하나를 선택: j번째 작업을 선택하지 않으면 OPT(j-1)가 최적의 해. j번째 작업을 선택하면 j번째 작업과 호환 가능한 마지막 작업 p(j) 까지의 최대 가중치 OPT(p(j))에 wj를 더한 값이 최적의 해.
 
-#### 슈도코드
+### 슈도코드
 
 ```
 BRUTE-FORCE (n, s1, …, sn, f1, …, fn, w1, …, wn)
@@ -29,23 +29,23 @@ IF (j = 0)
 ELSE
   RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[j])}.
 ```
-- BRUTE-FORCE
-1. 종료 시간 fj에 따라 작업을 정렬
-2. 이진 탐색: 작업 j와 호환되는 마지막 작업 p[j]를 계산
+#### BRUTE-FORCE
+- 종료 시간 fj에 따라 작업을 정렬
+- 이진 탐색: 작업 j와 호환되는 마지막 작업 p[j]를 계산
 
-- COMPUTE-OPT
-1. 재귀적 호출: j–1와 p[j]에 대해 COMPUTE-OPT를 다시 호출. 각 j에 대해 최댓값 선택.
+#### COMPUTE-OPT
+- 재귀적 호출: j–1와 p[j]에 대해 COMPUTE-OPT를 다시 호출. 각 j에 대해 최댓값 선택.
 
-- 시간 복잡도
+#### 시간 복잡도
 - BRUTE-FORCE: 정렬 O(nlogn), 이진 탐색 O(nlogn)
-- COMPUTE-OPT: 재귀적 호출 2^n
+- COMPUTE-OPT: 재귀적 호출 O(2^n)
 
-#### COMPUTE-OPT(n) 에서 최악의 경우?
+### COMPUTE-OPT(n) 에서 시간 복잡도?
 Q. 다음 중 COMPUTE-OPT(n) 에서 최악의 경우 시간 복잡도는?
-- Θ(n log n)
-- Θ(n2)
+- Θ(nlogn)
+- Θ(n^2)
 - Θ(1.618n)
-- Θ(2n)
+- Θ(2^n)
 
 A. Θ(2n)
 
