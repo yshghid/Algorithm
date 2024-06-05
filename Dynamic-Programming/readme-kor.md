@@ -9,7 +9,26 @@
 - 작업 j는 시작 시간 sj, 종료 시간 fj, 가중치 wj를 갖는다.
 - 상호 호환 가능한 작업들 중 최대 가중치의 부분 집합을 찾는다. ("호환": 두 작업이 겹치지 않음)
 
-### 동적 프로그래밍: 이진 선택 (Dynamic Programming: Binary Choice)
+### 동적 프로그래밍의 이진 선택 (Dynamic Programming: Binary Choice)
 
 - OPT(j): 첫번째부터 j번째 작업까지 호환 가능한 작업들 중 최대 가중치
-- 목표: OPT(n) 
+- OPT(j) = max(OPT(j-1),OPT(p(j)+wj)
+- 두 선택지 중 하나를 선택: j번째 작업을 선택하지 않으면 OPT(j-1)가 최적의 해. j번째 작업을 선택하면 j번째 작업과 호환 가능한 마지막 작업 p(j) 까지의 최대 가중치 OPT(p(j))에 wj를 더한 값이 최적의 해.
+
+### COMPUTE-OPT(n) 에서 최악의 경우?
+A. Θ(n log n)
+B. Θ(n2)
+C. Θ(1.618n)
+D. Θ(2n)
+```
+COMPUTE-OPT( j )
+IF (j = 0)
+RETURN 0.
+ELSE
+RETURN max {COMPUTE-OPT(j – 1), wj + COMPUTE-OPT(p[ j ]) }.
+```
+- 이 함수의 특징은 각 j값에 대해 COMPUTE-OPT 함수를 두 번 호출한다는 것. 이러한 재귀적 호출은  함수가 기하급수적으로 증가하는 호출 트리를 생성할 수 있다.
+- 
+
+### 브루트 포스
+
