@@ -219,6 +219,15 @@ cf) 다섯번째 업데이트의 효과: (4->1) 로 유량을 1 증가시키는 
 
 - 유량 네트워크에서 최대 유량과 최소 컷의 용량이 같음을 확인할 수 있다.
 
+```
+FORD–FULKERSON(G)
+FOREACH edge e ∈ E : f (e) ← 0.
+Gf ← residual network of G with respect to flow f.
+WHILE (there exists an s↝t path P in Gf )
+f ← AUGMENT( f, c, P).
+Update Gf
+```
+
 ## 최소 컷 최대 유량 정리 (Max-flow min-cut theorem)
 
 - 최대 유량: 네트워크에서 소스에서 싱크로 보낼 수 있는 최대 유량
