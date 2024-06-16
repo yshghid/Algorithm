@@ -224,8 +224,8 @@ FORD–FULKERSON(G)
 FOREACH edge e ∈ E : f (e) ← 0.
 Gf ← residual network of G with respect to flow f.
 WHILE (there exists an s↝t path P in Gf )
-f ← AUGMENT( f, c, P).
-Update Gf
+  f ← AUGMENT( f, c, P).
+  Update Gf
 ```
 
 ## 최소 컷 최대 유량 정리 (Max-flow min-cut theorem)
