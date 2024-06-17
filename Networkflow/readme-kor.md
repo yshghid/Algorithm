@@ -221,17 +221,17 @@ cf) 다섯번째 업데이트의 효과: (4->1) 로 유량을 1 증가시키는 
 
 ```
 FORD–FULKERSON(G)
-FOREACH edge e ∈ E : f (e) ← 0.
+FOREACH edge e ∈ E : f(e) ← 0.
 Gf ← residual network of G with respect to flow f.
-WHILE (there exists an s↝t path P in Gf )
-  f ← AUGMENT( f, c, P).
+WHILE (there exists an s↝t path P in Gf)
+  f ← AUGMENT(f, c, P).
   Update Gf.
 RETURN f.
 
-AUGMENT( f, c, P)
+AUGMENT(f, c, P)
 FOREACH edge e ∈ P :
-  IF (e ∈ E) f (e) ← f (e) + δ.
-  ELSE f (ereverse) ← f (ereverse) – δ.
+  IF (e ∈ E) f(e) ← f(e) + δ.
+  ELSE f(ereverse) ← f ereverse) – δ.
 RETURN f.
 ```
 
